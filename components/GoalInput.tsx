@@ -4,6 +4,7 @@ import { View, TextInput, Button, StyleSheet, Modal } from "react-native";
 type Props = {
   onAddGoal: (enteredText: string) => void;
   visible: boolean;
+  onCancel: () => void;
 };
 
 const GoalInput = (props: Props) => {
@@ -32,7 +33,7 @@ const GoalInput = (props: Props) => {
             <Button title="Add Goal" onPress={addGoalHandler} />
           </View>
           <View style={styles.button}>
-            <Button title="Cancel" />
+            <Button title="Cancel" onPress={props.onCancel} />
           </View>
         </View>
       </View>
